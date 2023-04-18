@@ -1,0 +1,361 @@
+/* * {
+    box-sizing: border-box;
+  } */
+
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    /* padding: 15px; */
+  }
+ 
+  /* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+a{
+    text-decoration: none;
+}
+
+
+.menu_container {
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+/* end of menu */
+
+#bg {
+   /* The image used */
+  background-image: url("sources/bg_l.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#textbox{
+    width: 40%;
+    text-align: left;
+    position: absolute;
+    margin: auto;
+    top: 10%;
+    left: 10%;
+    transform: translate(0%, 0%);
+    z-index: 125;
+}
+
+#title{
+    width: 100%;
+    height: auto;
+}
+
+#wepay {
+    width: 30%;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    bottom: 30%;
+    right: 10%;
+    transform: translate(0%, 0%);
+}
+
+#car{
+    z-index: 1;
+    width: 50%;
+    text-align: left;
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    /* transform: translate(-50%, -50%); */
+}
+#dg_l{
+    width: 50%;
+    /* text-align: center; */
+    position: absolute;
+    left:0;
+    bottom: 0%;
+    /* transform: translate(-50%, -50%); */
+}
+#dg{
+   display: none;
+}
+.logo{
+    /* position: absolute; */
+    float: right;
+    z-index: 12;
+    width: 300px;
+}
+#contact{
+  z-index: 125;
+  padding-top: 90%;
+  position: absolute;
+  margin: auto;
+  display: block;
+  text-align: left;
+  bottom: 3%;
+  left: 10%;
+}
+#Group_3,#Group_1,.pointer{
+  cursor: pointer;
+}
+#cs_img{
+/* z-index: 125;
+padding-top: 90%;
+position: absolute;
+margin: auto;
+display: block;
+text-align: center;
+bottom: 3%;
+left: 16%; */
+width: 20vw;
+}
+#myNav{
+    z-index: 1515151;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#myNav a:hover{
+    cursor: pointer;
+    color: white;        
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+
+@media only screen and (max-width: 768px) {
+    body, html {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+      }
+
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }    
+    #bg {
+        /* The image used */
+        background-image: url("sources/bg.png");
+        padding-top: 6px;
+        /* Full height */
+        height: 100%; 
+        
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+   
+   
+    #textbox{
+      width: 90%;
+      text-align: center;
+      position: absolute;
+      margin: auto;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+    #dg_l{
+        display: none;
+     }
+    #dg {
+        display: block;
+        width: 100%;
+        /* text-align: center; */
+        position: absolute;
+        right:0;
+        bottom: 0;
+        /* transform: translate(-50%, -50%); */
+    }
+    #wepay {
+      width: 70%;
+      text-align: center;
+      position: absolute;
+      margin: auto;
+      bottom: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+    #car{
+        z-index: 1;
+        width: 90%;
+        text-align: center;
+        position: absolute;
+        bottom: 20%;
+        left: 5%;
+        /* transform: translate(-50%, -50%); */
+    }
+    #h2{
+        /* width: 80%; */
+        white-space: nowrap;
+        text-align: left;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 6vw;
+        color: rgba(255,255,255,1);
+        /* transform: translate(-50%, -50%); */
+        margin-bottom: 10px;
+    }
+    #h1{
+        /* width: 80%; */
+        white-space: nowrap;
+		font-family: Bebas Neue;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20vw;
+        text-align: left;
+		color: rgba(237,26,52,1);
+        /* transform: translate(-50%, -50%); */
+    }
+    #h3{
+        /* width: 80%; */
+        white-space: nowrap;
+		text-align: left;
+		font-family: Nexa;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 7vw;
+        color: rgba(255,255,255,1);
+		/* color: rgba(255,255,255,1); */
+    }
+    #footer{
+        z-index: 123;
+        width: 90%;
+        text-align: center;
+        position: absolute;
+        margin: auto;
+        bottom: 10%;
+        left: 10%;
+        /* transform: translate(-50%, -50%); */
+    }
+    .logo{
+        /* position: absolute; */
+        float: right;
+        z-index: 12;
+        width: 130px;
+    }
+    #contact{
+      z-index: 125;
+      padding-top: 90%;
+      position: absolute;
+      margin: auto;
+      display: block;
+      text-align: left;
+      bottom: 3%;
+      left: 10%;
+      }
+      #title{
+          width: 100%;
+          height: auto;
+      }
+      #cs_img{
+        width: 40vw;
+      }
+  }
+
+
+/* #car {
+    position: absolute;
+    width: 445px;
+    height: 348px;
+    left: -13px;
+    top: 418px;
+    overflow: visible;
+} */
